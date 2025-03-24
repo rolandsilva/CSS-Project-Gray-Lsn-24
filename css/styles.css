@@ -1,0 +1,39 @@
+html {
+    font-size: 22px;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-left: 1px sold #333;
+    border-right: 1px sold #333;
+}
+
+th,
+td,
+caption {
+    border: 1px solid #333;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: separate;
+    padding: 0.5 rem;
+}
+
+/* The border-collapse property in CSS is used with HTML <table> elements to control how table borders are rendered.
+•	collapse: Borders of adjacent cells are merged into a single border.
+•	separate: (default) Borders are separate, with space between them. */
+
+
+.CSS_lesson_banner {
+    width: 100%;
+    padding: 10px 0;
+    /* font-size: 2em; */
+    font-size: clamp(1.5rem, 2.5vh, 2rem);
+    text-align: center;
+    margin: 0px 0 0px 0;
+    margin: 0 auto;
+    background-color: rgb(43, 173, 199);
+    border: 3px solid black;
+    margin-bottom: 0.25em;
+}
