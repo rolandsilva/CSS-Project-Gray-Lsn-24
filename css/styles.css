@@ -16,14 +16,15 @@ body {
 
 
 
-/* th,
+th,
 td,
 caption {
     border: 1px solid #333;
     font-family: 'Courier New', Courier, monospace;
     border-collapse: separate;
     padding: 0.5 rem;
-} */
+}
+
 /* The border-collapse property in CSS is used with HTML <table> elements to control how table borders are rendered.
 •	collapse: Borders of adjacent cells are merged into a single border.
 •	separate: (default) Borders are separate, with space between them. */
