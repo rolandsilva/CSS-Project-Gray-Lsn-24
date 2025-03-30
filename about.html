@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Roland Silva">
     <meta name="description" content="About LTS">
     <title>The Little Taco Shop</title>
@@ -17,43 +18,81 @@
         <span style="color: red" ;> About LTS </span> &nbsp; Lesson 24 &nbsp; Project
     </header>
 
-    <header>
-        <h1>About the Little Taco Shop</h1>
+    <header class="header">
+        <h1 class="header__h1">The Little Taco Shop</h1>
 
-        <nav>
-            <ul>
+        <nav class="header__nav">
+            <ul class="header__ul">
                 <li>
-                    <a href="/" LTS<abbr title="The Little Taco Shop">LTS Home</abbr>
+                    <a href="/" LTS<abbr title="The Little Taco Shop">Home</abbr>
                     </a>
                 </li>
 
                 <li>
-                    <a href="/#menu">Our Menu</a>
+                    <a href="/#menu">Menu</a>
                 </li>
 
                 <li>
-                    <a href="hours.html">Store Hours</a>
+                    <a href="hours.html">Hours</a>
                 </li>
 
                 <li>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="contact.html">Contact</a>
                 </li>
 
             </ul>
         </nav>
+    </header>
 
+    <!-- <hr> -->
+
+    <section class="hero">
         <figure>
-            <img src="img/tacos_and_drink_400x267.png" alt="tacos and a Drink" title="We love tacos" height="400"
-                width="667">
-            <figcaption>Tacos and a Drink</figcaption>
+            <img src="img/tacos_delicioso_1000x667.png" alt="Tacos Delicioso" title="Tacos Delicioso!" width="1000"
+                height="667">
+            <figcaption class="offscreen">Try these delicious Tacos</figcaption>
         </figure>
+    </section>
+    <!-- <figure>
+        <img src="img/tacos_and_drink_400x267.png" alt="tacos and a Drink" title="We love tacos" height="400"
+            width="667">
+        <figcaption>Tacos and a Drink</figcaption>
+    </figure> -->
 
     </header>
 
     <hr>
 
     <main>
-        <p>our content will go here</p>
+        <article>
+            <h2>About
+                <abbr title="The Little Taco Shop">LTS</abbr>
+            </h2>
+            <p>
+                <abbr title="The Little Taco Shop">LTS</abbr> was founded in <time datetime="2002">2002.</time>
+                Our shop was built on the <strong>love of
+                    tacos</strong> 🌮🌮🌮. We hope our shop adds a unique and interesting place
+                to
+                our
+                town.
+            </p>
+            <aside>
+                <h3>Taco Trivia</h3>
+                <details>
+                    <summary>When did tacos appear in the United States ?</summary>
+                    <p class="about__trivia-answer">
+                        Jeffrey M. Pilcher, taco historian and professor of history at the University of Minnesota, says
+                        the earliest mention of tacos in the United States are in a newspaper from <time
+                            datetime="1905">1905</time>.
+                        (Source:
+                        <cite>
+                            <a href="https://www.smithsonianmag.com/arts-culture/where-did-the-taco-come-from-81228162/"
+                                target="_blank">Smithsonian Magazine</a>
+                        </cite> )
+                    </p>
+                </details>
+            </aside>
+        </article>
     </main>
 
     <hr>

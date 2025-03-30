@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Roland Silva">
     <meta name="description" content="Contact information for the Little Taco Shop">
     <title>Contact Us - LTS</title>
@@ -17,44 +18,42 @@
         <span style="color: red" ;>Contact LTS </span> &nbsp; Lesson 24 &nbsp; Project
     </header>
 
-    <header>
-        <h1>Contact the Little Taco Shop</h1>
-
-        <nav>
-            <ul>
-
+    <header class="header">
+        <h1 class="header__h1">Contact the Little Taco Shop</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
                 <li>
-                    <!-- <a href="index.html">LTS Home</a> -->
-                    <a href="/">LTS Home</a>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
                 </li>
 
                 <li>
-                    <a href="about.html" About <abbr title="The Little Taco Shop">About LTS</abbr>
-                    </a>
+                    <a href="/#menu">Menu</a>
                 </li>
 
                 <li>
-                    <a href="/#menu">Our Menu</a>
-                </li>
-
-                <li>
-                    <a href="hours.html">Store Hours</a>
+                    <a href="hours.html">Hours</a>
                 </li>
 
             </ul>
         </nav>
-
-        <figure>
-            <img src="img/tacos_close_up_400x260.png" alt="Tacos ready to eat!" title="Tacos ready to eat!" width="400"
-                height="260">
-            <figcaption>Little Taco Shop Tacos</figcaption>
-        </figure>
     </header>
+
+    <section class="hero">
+        <figure>
+            <img src="img/tacos_close_up_1000x649.png" alt="Tacos ready to eat!" title="Tacos ready to eat!"
+                width="1000" height="649">
+            <figcaption class="offscreen">Little Taco Shop Tacos</figcaption>
+        </figure>
+    </section>
 
     <hr>
 
     <main>
-        <section>
+        <p style="color: red; font-weight: bold; font-size: 2rem;">Main content goes here !!!</p>
+        <!-- <section>
             <h2>Our Contact Form</h2>
             <form action="https://httpbin.org/get" method="get">
                 <fieldset>
@@ -63,16 +62,13 @@
                         <label for="Name">Name:</label>
                         <input type="text" name="name" id="name" placeholder="Your Name" required>
                     </p>
-
                     <p>
                         <label for="Email">Your Email:</label>
                         <input type="email" name="email" id="email" placeholder="Your email">
                     </p>
-
                     <p>
                         <label for="message">Your Message:</label>
                         <br>
-                        <!-- <label for="message" style="display: block; margin-bottom: 0.5em;">Your Message:</label> -->
                         <textarea name="message" id="message" cols="30" rows="10"
                             placeholder="Type your message here"></textarea>
                     </p>
@@ -80,18 +76,16 @@
                 <button type="submit">Send</button>
                 <button type="reset">Reset</button>
             </form>
-
-        </section>
-
+        </section> -->
+        <!-- 
         <section>
-
             <h2>Our Location:</h2>
             <address>555 Taco Temptation Lane, Suite T <br>
                 Kansas City, Kansas 5555-5555
                 <br><br>
                 Phone: <a href="tel: +555-555-5555">555-555-5555</a>
             </address>
-        </section>
+        </section> -->
     </main>
 
     <hr>
