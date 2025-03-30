@@ -1,31 +1,122 @@
 /*-- HTML/CSS YT D.Gray CSS Project --*/
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
+
+/* from fonts.google.com */
+
+
+/* || RESET  || */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* ul,
+li::marker {
+    list-style: none;
+    padding: 0;
+} */
+
+/* || VARIABLES || */
+:root {
+    /* FONTS */
+    --FF: "nunito", sans-serif;
+    --FF-HEADINGS: "Fugaz One", cursive;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLORS */
+    --BGCOLOR: orange;
+    --BGCOLOR-Fade: rgb(252, 220, 160);
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-Fade));
+    --BODY-BGCOLOR: #FFF;
+    --FONT-COLOR: #000;
+    --BORDER-COLOR: #333;
+
+
+    /* || BORDERS || */
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+}
+
+/* || UTILITY CLASSES || */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+/* || GENERAL STYLES || */
+
+
 
 html {
-    font-size: 22px;
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
 }
 
 body {
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--FF-HEADINGS);
+    letter-spacing: 0.1em;
+}
+
+/* html {
+    font-size: 22px;
+} */
+
+/* body {
     min-height: 100vh;
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
     border-left: 1px sold #333;
     border-right: 1px sold #333;
-}
+} */
 
-
-
-
-
-
-th,
+/* th,
 td,
 caption {
     border: 1px solid #333;
     font-family: 'Courier New', Courier, monospace;
     border-collapse: separate;
     padding: 0.5 rem;
-}
+} */
 
 /* The border-collapse property in CSS is used with HTML <table> elements to control how table borders are rendered.
 •	collapse: Borders of adjacent cells are merged into a single border.
