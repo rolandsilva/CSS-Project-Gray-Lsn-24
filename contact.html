@@ -41,19 +41,28 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <article class="hero">
         <figure>
             <img src="img/tacos_close_up_1000x649.png" alt="Tacos ready to eat!" title="Tacos ready to eat!"
                 width="1000" height="649">
             <figcaption class="offscreen">Little Taco Shop Tacos</figcaption>
         </figure>
-    </section>
+    </article>
 
     <hr>
 
-    <main>
-        <p style="color: red; font-weight: bold; font-size: 2rem;">Main content goes here !!!</p>
-        <!-- <section>
+    <main class="main">
+        <article class="main__article">
+            <h2>Our Location:</h2>
+            <address>555 Taco Temptation Lane, Suite T <br>
+                Kansas City, Kansas 5555-5555
+                <br>
+                Phone: <a href="tel: +555-555-5555">555-555-5555</a>
+            </address>
+            <br>
+        </article>
+
+        <article class="main__article">
             <h2>Our Contact Form</h2>
             <form action="https://httpbin.org/get" method="get">
                 <fieldset>
@@ -76,22 +85,16 @@
                 <button type="submit">Send</button>
                 <button type="reset">Reset</button>
             </form>
-        </section> -->
-        <!-- 
-        <section>
-            <h2>Our Location:</h2>
-            <address>555 Taco Temptation Lane, Suite T <br>
-                Kansas City, Kansas 5555-5555
-                <br><br>
-                Phone: <a href="tel: +555-555-5555">555-555-5555</a>
-            </address>
-        </section> -->
+        </article>
     </main>
 
     <hr>
 
-    <footer>
-        <p>Copyright &copy; The Little Taco Shop</p>
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy;</span>
+            <span class="nowrap">The Little Taco Shop</span>
+        </p>
     </footer>
 
 
