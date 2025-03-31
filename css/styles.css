@@ -158,6 +158,7 @@ a:active {
     text-align: center;
     background-color: var(--HEADER-BGCOLOR);
     color: var(--HEADER-COLOR);
+    /* color: var(--HIGHLIGHT-COLOR); */
     padding: var(--PADDING-TB) var(--PADDING-SIDE);
 }
 
@@ -193,6 +194,11 @@ a:active {
     animation: showWelcome 0.5s ease-in-out 1s forwards;
 }
 
+.hero img {
+    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0 0 0);
+}
+
 @keyframes showWelcome {
     0% {
         top: -20px;
@@ -218,9 +224,20 @@ a:active {
     padding: var(--PADDING-TB) var(--PADDING-SIDE);
 }
 
+.main__article {
+    scroll-margin-top: 6.5rem;
+    margin: var(--MARGIN);
+}
 
+.main__article:first-child {
+    margin-top: 1em;
 
+}
 
+.main__article:last-child {
+    min-height: calc(100vh -20rem);
+
+}
 
 /* || FOOTER || */
 .footer {
@@ -229,6 +246,57 @@ a:active {
     background-color: var(--HEADER-BGCOLOR);
     color: var(--HEADER-COLOR);
     padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+/* || ABOUT || */
+.about__trivia {
+    margin: var(--MARGIN);
+}
+
+.about__trivia-answer {
+    margin-top: 0.5em;
+}
+
+/* || CONTACT || */
+.contact__h2 {
+    margin: 0;
+}
+
+.contact__fieldset {
+    border: 2px solid lightgray;
+    padding: 0.5rem;
+    /* border: none; */
+}
+
+.contact__p {
+    margin: 1em 0;
+}
+
+.contact__label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact__input {
+    padding: 0.5em;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 60%;
+}
+
+.contact__textarea {
+    padding: 0.5em;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 100%;
+}
+
+.contact__button {
+    padding: 0.5em;
+    border-radius: 15px;
+    border-width: 2px;
+    color: var(--HEADER-COLOR);
+    background-color: var(--HIGHLIGHT-COLOR);
 }
 
 
