@@ -54,9 +54,11 @@ li::marker {
     --NAV-COLOR: #FFF;
     --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
     --HERO-COLOR: #FFF;
+    --TRIVIA-ANSWER-COLOR: gray;
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
+    --BORDER-RADIUS: 15px;
 
     /* STANDARD PADDING */
     --PADDING-TB: 0.25em;
@@ -64,9 +66,32 @@ li::marker {
 
     /* STANDARD MARGIN */
     --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
-
 }
 
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOR: #000;
+        --BGCOLOR-FADE: gray;
+    }
+} */
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOR-FADE: gray;
+        --BGCOLOR: #000;
+        --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+        --BODY-BGCOLOR: #333;
+        --BORDER-COLOR: whitesmoke;
+        --FONT-COLOR: whitesmoke;
+        --HEADER-COLOR: whitesmoke;
+        --HERO-COLOR: #333;
+        --HIGHLIGHT-COLOR: whitesmoke;
+        --LINK-ACTIVE: rgb(252, 200, 103);
+        --LINK-COLOR: whitesmoke;
+        --LINK-HOVER: orange;
+        --NAV-BGCOLOR: rgb(20 20 20);
+    }
+} */
 
 /* || UTILITY CLASSES || */
 .offscreen {
@@ -98,23 +123,29 @@ body {
     min-height: 100vh;
     max-width: 800px;
     margin: 0 auto;
-    padding: 1rem;
     border-left: var(--BORDERS);
     border-right: var(--BORDERS);
     box-shadow: 0 0 10px var(--BORDER-COLOR);
 }
 
+.div-header-spacer {
+    height: .4em;
+    /* background-color: aqua; */
+}
+
 .CSS_lesson_banner {
-    width: 100%;
+    width: 95%;
     padding: 10px 0;
     /* font-size: 2em; */
     font-size: clamp(1.5rem, 2.5vh, 2rem);
     text-align: center;
-    margin: 0px 0 0px 0;
+    /* margin: 0px 0px 0px 0px; */
     margin: 0 auto;
     background-color: rgb(43, 173, 199);
     border: 3px solid black;
+    /* margin-top: 1em; */
     margin-bottom: 0.25em;
+
 }
 
 h1,
@@ -255,6 +286,7 @@ a:active {
 
 .about__trivia-answer {
     margin-top: 0.5em;
+    color: var(--TRIVIA-ANSWER-COLOR);
 }
 
 /* || CONTACT || */
@@ -279,7 +311,7 @@ a:active {
 
 .contact__input {
     padding: 0.5em;
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     border-width: 2px;
     width: 60%;
 }
@@ -293,25 +325,107 @@ a:active {
 
 .contact__button {
     padding: 0.5em;
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     border-width: 2px;
+    margin-top: 0.5em;
     color: var(--HEADER-COLOR);
     background-color: var(--HIGHLIGHT-COLOR);
 }
 
+/* || MENU || */
+thead,
+tbody,
+tfoot,
+tr {
+    display: contents;
+    /* takes the parents out of the flow for table to grid */
+}
 
-/* html {
-    font-size: 22px;
-} */
+.menu__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "hd1 hd2 hd3"
+        "cr cr1 crp1"
+        "cr cr2 crp2"
+        "cr cr3 crp3"
+        "sf sf1 sfp1"
+        "sf sf2 sfp2"
+        "sf sf3 sfp3"
+        "cs cs cs";
+    gap: 0.1em;
+    margin-bottom: 1em;
+}
 
-/* body {
-    min-height: 100vh;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-    border-left: 1px sold #333;
-    border-right: 1px sold #333;
-} */
+.menu__cr {
+    grid-area: cr;
+}
+
+.menu__sf {
+    grid-area: sf;
+}
+
+.menu__cs {
+    grid-area: cs;
+    /* color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold; */
+}
+
+.menu__cr,
+.menu__sf,
+.menu__cs,
+.menu__header {
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.menu__header,
+.menu__item {
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOR);
+}
+
+.menu__item {
+    display: grid;
+    place-content: center;
+}
+
+thead th:first-child {
+    border-top-left-radius: var(--BORDER-RADIUS);
+}
+
+thead th:last-child {
+    border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+tfoot td {
+    border-bottom-left-radius: var(--BORDER-RADIUS);
+    border-bottom-right-radius: var(--BORDER-RADIUS);
+}
+
+
+@media screen and (min-width: 576px) {
+    .header__h1::before {
+        content: "🌮 "
+    }
+
+    .header__h1::after {
+        content: " 🌮"
+    }
+
+    .menu__cr,
+    .menu__sf,
+    .menu__cs,
+    .menu__header {
+        font-size: 125%;
+    }
+
+}
+
 
 /* th,
 td,
