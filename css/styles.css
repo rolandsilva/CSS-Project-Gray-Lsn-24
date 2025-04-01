@@ -34,40 +34,40 @@ li::marker {
 /* || VARIABLES || */
 :root {
     /* FONTS */
-    --FF: "nunito", sans-serif;
-    --FF-HEADINGS: "Fugaz One", cursive;
-    --FS: clamp(1rem, 2.2vh, 1.5rem);
-    --FS-SM: clamp(0.75rem, 1.3vh, 1rem);
 
-    /* COLORS */
-    --BGCOLOR: orange;
     --BGCOLOR-Fade: rgb(252, 220, 160);
+    --BGCOLOR: orange;
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-Fade));
     --BODY-BGCOLOR: #FFF;
-    --FONT-COLOR: #000;
     --BORDER-COLOR: #333;
+    --FF-HEADINGS: "Fugaz One", cursive;
+    --FF: "nunito", sans-serif;
+    --FONT-COLOR: #000;
+    --FS-SM: clamp(0.75rem, 1.3vh, 1rem);
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+    --HEADER-BGCOLOR: #000;
+    --HEADER-COLOR: #FFF;
+    --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
+    --HERO-COLOR: #FFF;
     --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+    --LINK-ACTIVE: rgb(51, 178, 51);
     --LINK-COLOR-BLACK: #000;
     --LINK-COLOR: orange;
     --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
-    /* --LINK-HOVER: hsla(14, 100%, 50%, 0.882); */
-    /* --LINK-ACTIVE: orange; */
-    --LINK-ACTIVE: rgb(51, 178, 51);
-    --HEADER-BGCOLOR: #000;
-    --HEADER-COLOR: #FFF;
     --NAV-COLOR: #FFF;
-    --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
-    --HERO-COLOR: #FFF;
-    --TRIVIA-ANSWER-COLOR: gray;
     --TEXTAREA-COLOR: rgb(167, 216, 167);
+    --TRIVIA-ANSWER-COLOR: gray;
+    /* --LINK-ACTIVE: orange; */
+    /* --LINK-HOVER: hsla(14, 100%, 50%, 0.882); */
+    /* COLORS */
 
     /* BORDERS */
-    --BORDERS: 1px solid var(--BORDER-COLOR);
     --BORDER-RADIUS: 15px;
+    --BORDERS: 1px solid var(--BORDER-COLOR);
 
     /* STANDARD PADDING */
-    --PADDING-TB: 0.25em;
     --PADDING-SIDE: 2.5%;
+    --PADDING-TB: 0.25em;
 
     /* STANDARD MARGIN */
     --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
@@ -99,13 +99,8 @@ li::marker {
 } */
 
 /* || UTILITY CLASSES || */
-.offscreen {
-    position: absolute;
-    left: -10000px;
-}
-
-.nowrap {
-    white-space: nowrap;
+.add-bottom-margin {
+    margin-bottom: 0.5em;
 }
 
 .center {
@@ -118,10 +113,14 @@ li::marker {
     margin-bottom: 0.25em;
 }
 
-.add-bottom-margin {
-    margin-bottom: 0.5em;
+.nowrap {
+    white-space: nowrap;
 }
 
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
 
 /* || GENERAL STYLES || */
 
