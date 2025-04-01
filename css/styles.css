@@ -37,6 +37,7 @@ li::marker {
     --FF: "nunito", sans-serif;
     --FF-HEADINGS: "Fugaz One", cursive;
     --FS: clamp(1rem, 2.2vh, 1.5rem);
+    --FS-SM: clamp(0.75rem, 1.3vh, 1rem);
 
     /* COLORS */
     --BGCOLOR: orange;
@@ -46,15 +47,19 @@ li::marker {
     --FONT-COLOR: #000;
     --BORDER-COLOR: #333;
     --HIGHLIGHT-COLOR: rgb(51, 178, 51);
-    --LINK-COLOR: #000;
+    --LINK-COLOR-BLACK: #000;
+    --LINK-COLOR: orange;
     --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
-    --LINK-ACTIVE: orange;
+    /* --LINK-HOVER: hsla(14, 100%, 50%, 0.882); */
+    /* --LINK-ACTIVE: orange; */
+    --LINK-ACTIVE: rgb(51, 178, 51);
     --HEADER-BGCOLOR: #000;
     --HEADER-COLOR: #FFF;
     --NAV-COLOR: #FFF;
     --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
     --HERO-COLOR: #FFF;
     --TRIVIA-ANSWER-COLOR: gray;
+    --TEXTAREA-COLOR: rgb(167, 216, 167);
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -107,6 +112,17 @@ li::marker {
     text-align: center;
 }
 
+.highlight-text {
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+.add-bottom-margin {
+    margin-bottom: 0.5em;
+}
+
+
 /* || GENERAL STYLES || */
 
 html {
@@ -157,7 +173,7 @@ h3 {
 
 h2,
 h3 {
-    margin-bottom: 0.25em;
+    /* margin-bottom: 0.25em; */
     color: var(--HIGHLIGHT-COLOR)
 }
 
@@ -167,15 +183,34 @@ p {
 
 a:any-link {
     color: var(--LINK-COLOR);
+    font-weight: bolder;
+}
+
+nav a:any-link {
+    color: var(--LINK-COLOR-BLACK);
+    font-weight: bolder;
 }
 
 a:hover,
 a:focus-visible {
     color: var(--LINK-HOVER);
+    font-weight: bolder;
+}
+
+nav a:hover,
+a:focus-visible {
+    color: var(--LINK-HOVER);
+    font-weight: bolder;
 }
 
 a:active {
-    color: var(--LINK-ACTIVE)
+    color: var(--LINK-ACTIVE);
+    font-weight: bolder;
+}
+
+nav a:active {
+    color: var(--LINK-ACTIVE);
+    font-weight: bolder;
 }
 
 /* || HEADER || */
@@ -300,6 +335,15 @@ a:active {
     /* border: none; */
 }
 
+.contact__legend {
+    background-color: rgba(194, 194, 194, 0.6);
+    padding: 0.1em;
+    font-size: var(--FS-SM);
+    /* border-radius: var(--BORDER-RADIUS); */
+    /* border: 2px solid #333; */
+}
+
+
 .contact__p {
     margin: 1em 0;
 }
@@ -307,6 +351,8 @@ a:active {
 .contact__label {
     display: block;
     font-weight: bold;
+    color: var(--FONT-COLOR);
+    /* color: red; */
 }
 
 .contact__input {
@@ -316,11 +362,22 @@ a:active {
     width: 60%;
 }
 
+.contact__input::placeholder {
+    color: rgb(158, 158, 158);
+    opacity: 6;
+}
+
 .contact__textarea {
+    background-color: var(--TEXTAREA-COLOR);
     padding: 0.5em;
     border-radius: 15px;
     border-width: 2px;
     width: 100%;
+}
+
+.contact__textarea::placeholder {
+    color: rgb(84, 84, 84);
+    opacity: 6;
 }
 
 .contact__button {
